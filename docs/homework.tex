@@ -67,6 +67,8 @@ For convinience, I kept the Grakn Schema as simple as I could. This was the resu
     \lstinputlisting{../twitter/schema.gql}
 \FloatBarrier
 
+To set Grakn first run \texttt{grakn server start} and then \texttt{grakn console --keyspace twitter --file twitter/schema.gql} to load the schema.
+
 \subsection{Python Scripting}
 
 Twitter's API and some related utilities were handled through \texttt{twitter-controller.py}. An example of this was the \texttt{get\_next\_mutuals} function, which returned the mutual-follows of a given node by taking the intersection between the people that follow a certain person a the people that are followed by that person.
