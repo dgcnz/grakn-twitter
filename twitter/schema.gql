@@ -1,0 +1,28 @@
+define 
+
+################
+## ATTRIBUTES ##
+################
+
+	name sub attribute,
+		datatype string;
+	full-name sub name;
+
+    uuid sub attribute,
+        datatype string;
+
+	person sub entity,
+		has full-name,
+		key uuid;
+
+
+################
+## FRIENDSHIP ##
+################
+
+	friendship sub relation,
+		relates friend;
+
+	person sub entity,
+		plays friend;
+
